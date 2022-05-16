@@ -13,6 +13,11 @@
   align-items: center;
 
   transition: border-color var(--primary-transition);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .clients-list-item:not(:last-child) {
@@ -22,14 +27,9 @@
 .clients-icon {
   fill: var(--icon-color);
   transition: fill var(--primary-transition);
-}
 
-.clients-link:hover,
-.clients-link:focus {
-  border-color: var(--accent-color);
-}
-
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-  fill: var(--accent-color);
+  .clients-link:hover &,
+  .clients-link:focus & {
+    fill: var(--accent-color);
+  }
 }

@@ -15,20 +15,20 @@
   justify-content: center;
   align-items: center;
   transition: background-color var(--primary-transition);
-}
 
-.socials-link:hover,
-.socials-link:focus {
-  background-color: var(--accent-color);
-}
-
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
-  fill: var(--primary-white-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .socials-icon {
   fill: var(--icon-color);
 
   transition: fill var(--primary-transition);
+
+  .socials-link:hover &,
+  .socials-link:focus & {
+    fill: var(--primary-white-color);
+  }
 }

@@ -26,14 +26,14 @@
 
   transition: color var(--primary-transition), background-color var(--primary-transition),
     box-shadow var(--primary-transition);
-}
 
-.filter-btn:hover,
-.filter-btn:focus {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .card-list {
@@ -61,12 +61,12 @@
 .card-list-link {
   display: block;
   transition: box-shadow var(--primary-transition);
-}
 
-.card-list-link:hover,
-.card-list-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .card-box {
@@ -93,11 +93,6 @@
   text-decoration: none;
 }
 
-.card-list-link:hover .card-list-top-text,
-.card-list-link:focus .card-list-top-text {
-  transform: translateY(0%);
-}
-
 .card-list-top-text {
   position: absolute;
   top: 0px;
@@ -109,6 +104,11 @@
   height: 100%;
   transform: translateY(100%);
   transition: transform var(--primary-transition);
+
+  .card-list-link:hover &,
+  .card-list-link:focus & {
+    transform: translateY(0%);
+  }
 }
 
 .card-list-text {
